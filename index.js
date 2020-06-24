@@ -1,3 +1,3 @@
 console.log('Package')
 console.log('feat')
-console.log('another feature')
+console.log('another feature fix')
