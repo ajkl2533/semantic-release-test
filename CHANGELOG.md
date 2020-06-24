@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/ajkl2533/semantic-release-test/compare/v1.0.1...v2.0.0) (2020-06-24)
+
+
+### Features
+
+* remove features ([5821833](https://github.com/ajkl2533/semantic-release-test/commit/58218332ae65eb98fe8d8dc3cb88fa367b1cf9b0))
+
+
+### BREAKING CHANGES
+
+* remove features
+
 ## [1.0.1](https://github.com/ajkl2533/semantic-release-test/compare/v1.0.0...v1.0.1) (2020-06-24)
 
 
