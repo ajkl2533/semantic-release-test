@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ajkl2533/semantic-release-test/compare/v1.0.0...v1.0.1) (2020-06-24)
+
+
+### Bug Fixes
+
+* fix feature ([7f352a8](https://github.com/ajkl2533/semantic-release-test/commit/7f352a806c9adfca6bd6e75b78e9d44f199deb19))
+
 # 1.0.0 (2020-06-24)
 
 
