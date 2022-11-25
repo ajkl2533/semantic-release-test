@@ -58,18 +58,25 @@ jobs:
         id: storybook-build-cache
         uses: actions/cache@v3
         with:
-          path: storybook-static
+          path: docs-build
           key: ${{ hashFiles('**/yarn.lock', '**/package.json', 'src/**', '!.storybook/image-snapshots/**' ,'.storybook/**') }}
 
       - name: Build Storybook
         if: steps.storybook-build-cache.outputs.cache-hit != 'true'
         run: yarn build-storybook -o ./docs-build/${{ env.version }}
 
+      - name: Generate redirect index
+        env:
+          VERSION: ${{ env.version }}
+        run: |
+          yarn node ./scripts/generate-index.js
+
       - name: Upload Storybook artifact
         uses: actions/upload-artifact@v3
         with:
           name: storybook
           path: ./docs-build
+          retention-days: 1
 
 
   deploy:
