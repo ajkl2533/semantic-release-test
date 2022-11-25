@@ -5,18 +5,6 @@ on:
   push:
     branches: [ master ]
 
-# Sets permissions of the GITHUB_TOKEN to allow Semantic Release and deployment to GitHub Pages
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-  issues: write
-
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   release:
     # Only release on push to master
@@ -64,25 +52,44 @@ jobs:
       - name: Get version
         id: get_version
         run: |
-          echo  "version=$(git describe --tags)" >> $GITHUB_OUTPUT
+          echo  "version=$(git describe --tags)" >> $GITHUB_ENV
+
+      - name: Cache storybook build
+        id: storybook-build-cache
+        uses: actions/cache@v3
+        with:
+          path: storybook-static
+          key: ${{ hashFiles('**/yarn.lock', '**/package.json', 'src/**', '!.storybook/image-snapshots/**' ,'.storybook/**') }}
 
       - name: Build Storybook
-        run: yarn build-storybook -o ./docs-build/${{ steps.get_version.outputs.version }}
+        if: steps.storybook-build-cache.outputs.cache-hit != 'true'
+        run: yarn storybook:build -o ./docs-build/${{ env.version }}
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload Storybook artifact
+        uses: actions/upload-artifact@v3
         with:
+          name: storybook
           path: ./docs-build
 
 
   deploy:
     needs: docs
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
+      - name: Download Storybook artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: storybook
+
+      - name: Commit storybook
+        run: |
+          git config --global user.name "Continuous Integration"
+          git config --global user.email "username@users.noreply.github.com"
+          git commit -a -m "Publish docs for ${{ env.version }}"
+          git push
 
