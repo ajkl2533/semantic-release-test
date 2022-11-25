@@ -67,7 +67,7 @@ jobs:
           echo  "docsPath=./docs-build/$(git describe --tags)" >> $GITHUB_OUTPUT
 
       - name: Build Storybook
-        run: yarn storybook:build -o ${{ steps.get_version.outputs.docsPath }}
+        run: yarn build-storybook -o ${{ steps.get_version.outputs.docsPath }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
