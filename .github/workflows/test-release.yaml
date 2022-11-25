@@ -63,7 +63,7 @@ jobs:
 
       - name: Build Storybook
         if: steps.storybook-build-cache.outputs.cache-hit != 'true'
-        run: yarn storybook:build -o ./docs-build/${{ env.version }}
+        run: yarn build-storybook -o ./docs-build/${{ env.version }}
 
       - name: Upload Storybook artifact
         uses: actions/upload-artifact@v3
