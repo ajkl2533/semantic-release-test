@@ -43,9 +43,9 @@ jobs:
       - name: Get version
         id: get_version
         run: |
-          echo  "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+          echo  "version=$(git describe --tags)" >> $GITHUB_OUTPUT
 
       - name: Echo version
         run: |
-          echo "${{ env.version }}"
+          echo "${{ steps.get_version.outputs.version }}"
 
