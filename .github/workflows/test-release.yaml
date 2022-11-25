@@ -64,15 +64,15 @@ jobs:
       - name: Get version
         id: get_version
         run: |
-          echo  "docsPath=./docs-build/$(git describe --tags)" >> $GITHUB_OUTPUT
+          echo  "version=$(git describe --tags)" >> $GITHUB_OUTPUT
 
       - name: Build Storybook
-        run: yarn build-storybook -o ${{ steps.get_version.outputs.docsPath }}
+        run: yarn build-storybook -o ./docs-build/${{ steps.get_version.outputs.version }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ${{ steps.get_version.outputs.docsPath }}
+          path: ./docs-build
 
 
   deploy:
