@@ -70,9 +70,6 @@ jobs:
         with:
           node-version: 16
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-
       - name: Install
         run: yarn install --frozen-lockfile
 
