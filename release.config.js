@@ -10,7 +10,8 @@ module.exports = {
     ["@semantic-release/github", {
       "assets": "release/*.tgz"
     }],
-    "@semantic-release/git"
+    "@semantic-release/git",
+    "semantic-release-export-data",
   ],
   "preset": "angular"
 }
