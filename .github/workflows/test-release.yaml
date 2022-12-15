@@ -80,7 +80,7 @@ jobs:
 
 
   deploy:
-    needs: [get-next-version, docs]
+    needs: docs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -98,6 +98,6 @@ jobs:
           git config --global user.name "Continuous Integration"
           git config --global user.email "username@users.noreply.github.com"
           git add -A
-          git commit -m "Publish docs for ${{ needs.get-next-version.outputs.new-release-version }}"
+          git commit -m "Publish docs for ${{ needs.release.outputs.new-release-version }}"
           git push
 
