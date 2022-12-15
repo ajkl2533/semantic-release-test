@@ -33,8 +33,8 @@ jobs:
       new-release-version: ${{ steps.get-next-version.outputs.new-release-version }}
 
   release:
-    # Only release on push to master
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: get-next-version
+    if: needs.get-next-version.outputs.new-release-published == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
