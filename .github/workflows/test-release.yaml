@@ -66,7 +66,7 @@ jobs:
 
   docs:
     needs: [get-next-version,release]
-    if: needs.get-next-version.outputs.new-release-published == 'true'
+    if: needs.get-next-version.outputs.new-release-published == 'true' && job.steps.get-next-version.status == success()
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
