@@ -31,8 +31,8 @@ jobs:
 
       - name: Show release
         run: |
-          echo ${{steps.get-next-version.outputs.new-release-published}}
-          echo ${{steps.get-next-version.outputs.new-release-version}}
+          echo The new version will be released: ${{steps.get-next-version.outputs.new-release-published}}
+          echo Number of the new vesion will be: ${{steps.get-next-version.outputs.new-release-version}}
     outputs:
       new-release-published: ${{ steps.get-next-version.outputs.new-release-published }}
       new-release-version: ${{ steps.get-next-version.outputs.new-release-version }}
