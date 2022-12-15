@@ -9,6 +9,7 @@ jobs:
   get-next-version:
     # Only release on push to master
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
