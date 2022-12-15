@@ -6,12 +6,44 @@ on:
     branches: [ master ]
 
 jobs:
+  get-next-version:
+    # Only release on push to master
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install
+        run: yarn install --frozen-lockfile
+
+      - name: Release
+        run: npx semantic-release --dry-run
+        id: get-next-version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Show release
+        run: |
+          echo The new version will be released: ${{steps.get-next-version.outputs.new-release-published}}
+          echo Number of the new vesion will be: ${{steps.get-next-version.outputs.new-release-version}}
+
+    outputs:
+      new-release-published: ${{ steps.get-next-version.outputs.new-release-published }}
+      new-release-version: ${{ steps.get-next-version.outputs.new-release-version }}
+      status: ${{ job.status }}
+
   release:
+    needs: get-next-version
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
-    outputs:
-      new-release-published: ${{ steps.release.outputs.new-release-published }}
-      new-release-version: ${{ steps.release.outputs.new-release-version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -30,14 +62,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Show release
-        run: |
-          echo The new version will be released: ${{steps.release.outputs.new-release-published}}
-          echo Number of the new vesion will be: ${{steps.release.outputs.new-release-version}}
-
   docs:
-    needs: release
-    if: needs.release.outputs.new-release-published == 'true'
+    needs: [get-next-version,release]
+    if: needs.get-next-version.outputs.new-release-published == 'true' && needs.get-next-version.outputs.status == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -63,11 +90,11 @@ jobs:
 
       - name: Build Storybook
         if: steps.storybook-build-cache.outputs.cache-hit != 'true'
-        run: yarn build-storybook -o ./docs-build/${{ needs.release.outputs.new-release-version }}
+        run: yarn build-storybook -o ./docs-build/${{ needs.get-next-version.outputs.new-release-version }}
 
       - name: Generate redirect index
         env:
-          VERSION: ${{ needs.release.outputs.new-release-version }}
+          VERSION: ${{ needs.get-next-version.outputs.new-release-version }}
         run: |
           yarn node ./scripts/generate-index.js
 
@@ -80,7 +107,7 @@ jobs:
 
 
   deploy:
-    needs: docs
+    needs: [get-next-version, docs]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -98,6 +125,5 @@ jobs:
           git config --global user.name "Continuous Integration"
           git config --global user.email "username@users.noreply.github.com"
           git add -A
-          git commit -m "Publish docs for ${{ needs.release.outputs.new-release-version }}"
+          git commit -m "Publish docs for ${{ needs.get-next-version.outputs.new-release-version }}"
           git push
-
