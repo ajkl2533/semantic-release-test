@@ -1,3 +1,10 @@
+# [2.18.0](https://github.com/ajkl2533/semantic-release-test/compare/v2.17.0...v2.18.0) (2022-12-15)
+
+
+### Features
+
+* test 18 ([91c67c0](https://github.com/ajkl2533/semantic-release-test/commit/91c67c036f8e7ad2fad86bb6c73db2d792d7f105))
+
 # [2.17.0](https://github.com/ajkl2533/semantic-release-test/compare/v2.16.0...v2.17.0) (2022-12-02)
 
 
