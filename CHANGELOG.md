@@ -1,3 +1,15 @@
+# [3.0.0-alpha.2](https://github.com/ajkl2533/semantic-release-test/compare/v3.0.0-alpha.1...v3.0.0-alpha.2) (2023-03-01)
+
+
+### Features
+
+* alpha2 ([a60b294](https://github.com/ajkl2533/semantic-release-test/commit/a60b2946b20048ea249ec8c75772532c093c1fdb))
+
+
+### BREAKING CHANGES
+
+* whatev
+
 # [3.0.0-alpha.1](https://github.com/ajkl2533/semantic-release-test/compare/v2.24.0...v3.0.0-alpha.1) (2023-03-01)
 
 
