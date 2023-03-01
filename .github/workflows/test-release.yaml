@@ -29,6 +29,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install
+        if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
       - name: Release
