@@ -3,13 +3,11 @@ name: Release
 # Run the workflow when a Pull Request is opened or when changes are pushed to master
 on:
   push:
-    branches: [ master ]
+    branches: [master, 2.x, 3.x, next-major]
 
 jobs:
   get-next-version:
-    # Only release on push to master
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-    continue-on-error: true
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/2.x' || github.ref == 'refs/heads/3.x' || github.ref == 'refs/heads/next-major')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -63,7 +61,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   docs:
-    needs: [get-next-version,release]
+    needs: [get-next-version, release]
     if: needs.get-next-version.outputs.new-release-published == 'true' && needs.get-next-version.outputs.status == 'success'
     runs-on: ubuntu-latest
     steps:
@@ -104,7 +102,6 @@ jobs:
           name: storybook
           path: ./docs-build
           retention-days: 1
-
 
   deploy:
     needs: [get-next-version, docs]
