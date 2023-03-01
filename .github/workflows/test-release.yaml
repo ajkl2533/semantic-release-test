@@ -3,11 +3,11 @@ name: Release
 # Run the workflow when a Pull Request is opened or when changes are pushed to master
 on:
   push:
-    branches: [master, 3.x]
+    branches: [master, 3.x-alpha]
 
 jobs:
   release:
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/3.x')
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/3.x-alpha')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,6 +29,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install
+        if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
       - name: Release
