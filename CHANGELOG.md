@@ -1,3 +1,10 @@
+## [2.25.1](https://github.com/ajkl2533/semantic-release-test/compare/v2.25.0...v2.25.1) (2023-03-02)
+
+
+### Bug Fixes
+
+* release tag ([d836b18](https://github.com/ajkl2533/semantic-release-test/commit/d836b187b668741a2d6c33c4a438e7920ae90aab))
+
 # [2.25.0](https://github.com/ajkl2533/semantic-release-test/compare/v2.24.0...v2.25.0) (2023-03-01)
 
 
