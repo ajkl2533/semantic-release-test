@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/ajkl2533/semantic-release-test/compare/v3.0.0...v3.1.0) (2023-03-02)
+
+
+### Features
+
+* trigger release ([a852b55](https://github.com/ajkl2533/semantic-release-test/commit/a852b555c0c35dd5f700631ed0181749d0871f14))
+
 # [3.0.0](https://github.com/ajkl2533/semantic-release-test/compare/v2.24.0...v3.0.0) (2023-03-01)
 
 
