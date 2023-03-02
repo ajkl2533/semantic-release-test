@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/ajkl2533/semantic-release-test/compare/v3.1.0...v3.1.1) (2023-03-02)
+
+
+### Bug Fixes
+
+* release tag ([201c8bb](https://github.com/ajkl2533/semantic-release-test/commit/201c8bb66b87950bd3df6d5537ad87903117fab2))
+
 # [3.1.0](https://github.com/ajkl2533/semantic-release-test/compare/v3.0.0...v3.1.0) (2023-03-02)
 
 
