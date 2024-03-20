@@ -1,3 +1,10 @@
+## [4.2.1](https://github.com/ajkl2533/semantic-release-test/compare/v4.2.0...v4.2.1) (2024-03-20)
+
+
+### Bug Fixes
+
+* latest tag ([2445a84](https://github.com/ajkl2533/semantic-release-test/commit/2445a8406f4434bc98465c3ccb1093307d3cdff6))
+
 # [4.2.0](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0...v4.2.0) (2024-03-20)
 
 
