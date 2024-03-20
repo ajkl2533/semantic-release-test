@@ -1,3 +1,10 @@
+# [4.1.0-beta.4](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0-beta.3...v4.1.0-beta.4) (2024-03-20)
+
+
+### Bug Fixes
+
+* add publish config ([ef5c1c5](https://github.com/ajkl2533/semantic-release-test/commit/ef5c1c536f665f933818274e54eac2e6808b59ce))
+
 # [4.1.0-beta.3](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0-beta.2...v4.1.0-beta.3) (2024-03-20)
 
 
