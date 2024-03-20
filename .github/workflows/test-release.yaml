@@ -3,7 +3,7 @@ name: Release
 # Run the workflow when a Pull Request is opened or when changes are pushed to master
 on:
   push:
-    branches: [master, 2.x, 3.x, next-major]
+    branches: [master, 2.x, 3.x, next-major, beta, alpha]
 
 jobs:
   release:
