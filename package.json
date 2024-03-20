@@ -1,9 +1,8 @@
 {
-  "name": "semantic-release-test",
+  "name": "@ajkl2533/semantic-release-test",
   "version": "4.1.0-beta.2",
   "description": "",
   "main": "index.js",
-  "private": true,
   "files": [
     "index.js",
     "CHANGELOG.md",
