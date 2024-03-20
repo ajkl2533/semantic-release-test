@@ -1,7 +1,7 @@
 module.exports = {
   branches: [
     '+([0-9])?(.{+([0-9]),x}).x',
-    {name: 'master', channel: 'stable'},
+    {name: 'master'},
     {name: 'next-major', channel:'next'},
     {name: 'beta', channel:'beta', prerelease: true},
     {name: 'alpha', channel:'alpha', prerelease: true}
