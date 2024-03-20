@@ -1,3 +1,10 @@
+# [4.1.0-beta.2](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0-beta.1...v4.1.0-beta.2) (2024-03-20)
+
+
+### Bug Fixes
+
+* remove disttag ([eece207](https://github.com/ajkl2533/semantic-release-test/commit/eece2077426d426305e8ca071553e296d9f8e7e6))
+
 # [4.1.0-beta.1](https://github.com/ajkl2533/semantic-release-test/compare/v4.0.0...v4.1.0-beta.1) (2024-03-20)
 
 
