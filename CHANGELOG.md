@@ -1,3 +1,10 @@
+# [4.1.0-beta.1](https://github.com/ajkl2533/semantic-release-test/compare/v4.0.0...v4.1.0-beta.1) (2024-03-20)
+
+
+### Features
+
+* beta feature ([967970b](https://github.com/ajkl2533/semantic-release-test/commit/967970b0acbf09066756716005cd4475fedb6180))
+
 # [4.0.0](https://github.com/ajkl2533/semantic-release-test/compare/v3.1.1...v4.0.0) (2024-03-20)
 
 
