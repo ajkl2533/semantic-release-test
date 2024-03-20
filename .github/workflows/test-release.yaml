@@ -3,11 +3,9 @@ name: Release
 # Run the workflow when a Pull Request is opened or when changes are pushed to master
 on:
   push:
-    branches: [master, 2.x, 3.x, next-major, beta, alpha]
 
 jobs:
   release:
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/2.x' || github.ref == 'refs/heads/3.x' || github.ref == 'refs/heads/next-major' || github.ref == 'refs/heads/beta' || github.ref == 'refs/heads/alpha')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
