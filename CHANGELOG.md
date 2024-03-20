@@ -1,16 +1,16 @@
-# [4.2.0-beta.2](https://github.com/ajkl2533/semantic-release-test/compare/v4.2.0-beta.1...v4.2.0-beta.2) (2024-03-20)
+## [4.2.1](https://github.com/ajkl2533/semantic-release-test/compare/v4.2.0...v4.2.1) (2024-03-20)
+
+
+### Bug Fixes
+
+* latest tag ([2445a84](https://github.com/ajkl2533/semantic-release-test/commit/2445a8406f4434bc98465c3ccb1093307d3cdff6))
+
+# [4.2.0](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0...v4.2.0) (2024-03-20)
 
 
 ### Features
 
-* test beta3 ([1b5d047](https://github.com/ajkl2533/semantic-release-test/commit/1b5d0470685f5f8d186a1fa2d50ec03948b51819))
-
-# [4.2.0-beta.1](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0...v4.2.0-beta.1) (2024-03-20)
-
-
-### Features
-
-* test beta ([eeede1f](https://github.com/ajkl2533/semantic-release-test/commit/eeede1fb1e463aae86945ff0ce184b1a71b3fc28))
+* test master ([e02638d](https://github.com/ajkl2533/semantic-release-test/commit/e02638de8ce9748ddfa3923a04edf81d4a6c2b90))
 
 # [4.1.0](https://github.com/ajkl2533/semantic-release-test/compare/v4.0.0...v4.1.0) (2024-03-20)
 
