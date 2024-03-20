@@ -1,3 +1,11 @@
+## [4.2.2](https://github.com/ajkl2533/semantic-release-test/compare/v4.2.1...v4.2.2) (2024-03-20)
+
+
+### Bug Fixes
+
+* remove alpha ([a50a4e2](https://github.com/ajkl2533/semantic-release-test/commit/a50a4e2fc0b2f3dfd02f4081b2aeecf5cba8fecc))
+* workflow ([a3d0564](https://github.com/ajkl2533/semantic-release-test/commit/a3d05646267d0c0ce51eeff1f77cc8fa979451ef))
+
 ## [4.2.1](https://github.com/ajkl2533/semantic-release-test/compare/v4.2.0...v4.2.1) (2024-03-20)
 
 
