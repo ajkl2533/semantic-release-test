@@ -1,9 +1,8 @@
 {
-  "name": "semantic-release-test",
-  "version": "4.0.0",
+  "name": "@radekpodrazky/semantic-release-test",
+  "version": "4.1.0-beta.4",
   "description": "",
   "main": "index.js",
-  "private": true,
   "files": [
     "index.js",
     "CHANGELOG.md",
@@ -50,6 +49,8 @@
     "react-dom": "^18.2.0"
   },
   "publishConfig": {
-    "tag": "latest"
+    "access": "public",
+    "registry": "https://registry.npmjs.org",
+    "pkgRoot": "build"
   }
 }

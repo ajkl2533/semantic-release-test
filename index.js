@@ -1,3 +1,3 @@
 console.log("Package");
 
-// test 3.x-alpha.40
+// test beta

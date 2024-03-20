@@ -1,3 +1,36 @@
+# [4.1.0-beta.4](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0-beta.3...v4.1.0-beta.4) (2024-03-20)
+
+
+### Bug Fixes
+
+* add publish config ([ef5c1c5](https://github.com/ajkl2533/semantic-release-test/commit/ef5c1c536f665f933818274e54eac2e6808b59ce))
+
+# [4.1.0-beta.3](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0-beta.2...v4.1.0-beta.3) (2024-03-20)
+
+
+### Bug Fixes
+
+* update scope ([1d984e3](https://github.com/ajkl2533/semantic-release-test/commit/1d984e3d0b5a50fd9879d93acd2bf537a410e155))
+
+
+### Features
+
+* channels test ([59287b7](https://github.com/ajkl2533/semantic-release-test/commit/59287b7ba7f4329e563351c3e5180405ad3eaee4))
+
+# [4.1.0-beta.2](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0-beta.1...v4.1.0-beta.2) (2024-03-20)
+
+
+### Bug Fixes
+
+* remove disttag ([eece207](https://github.com/ajkl2533/semantic-release-test/commit/eece2077426d426305e8ca071553e296d9f8e7e6))
+
+# [4.1.0-beta.1](https://github.com/ajkl2533/semantic-release-test/compare/v4.0.0...v4.1.0-beta.1) (2024-03-20)
+
+
+### Features
+
+* beta feature ([967970b](https://github.com/ajkl2533/semantic-release-test/commit/967970b0acbf09066756716005cd4475fedb6180))
+
 # [4.0.0](https://github.com/ajkl2533/semantic-release-test/compare/v3.1.1...v4.0.0) (2024-03-20)
 
 
