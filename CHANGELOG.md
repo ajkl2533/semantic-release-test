@@ -1,3 +1,15 @@
+# [4.1.0-beta.3](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0-beta.2...v4.1.0-beta.3) (2024-03-20)
+
+
+### Bug Fixes
+
+* update scope ([1d984e3](https://github.com/ajkl2533/semantic-release-test/commit/1d984e3d0b5a50fd9879d93acd2bf537a410e155))
+
+
+### Features
+
+* channels test ([59287b7](https://github.com/ajkl2533/semantic-release-test/commit/59287b7ba7f4329e563351c3e5180405ad3eaee4))
+
 # [4.1.0-beta.2](https://github.com/ajkl2533/semantic-release-test/compare/v4.1.0-beta.1...v4.1.0-beta.2) (2024-03-20)
 
 
