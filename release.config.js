@@ -1,5 +1,11 @@
 module.exports = {
-  branches: ["master", "2.x", "3.x", "next-major"],
+  branches: [
+    '+([0-9])?(.{+([0-9]),x}).x',
+    'master',
+    'next-major',
+    {name: 'beta', prerelease: true},
+    {name: 'alpha', prerelease: true}
+  ],
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
