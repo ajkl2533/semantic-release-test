@@ -4,7 +4,6 @@ module.exports = {
     {name: 'master'},
     {name: 'next-major', channel:'next'},
     {name: 'beta', channel:'beta', prerelease: true},
-    {name: 'alpha', channel:'alpha', prerelease: true}
   ],
   plugins: [
     "@semantic-release/commit-analyzer",
