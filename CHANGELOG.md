@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/ajkl2533/semantic-release-test/compare/v3.1.1...v4.0.0) (2024-03-20)
+
+
+### Features
+
+* update release config ([0b35a8b](https://github.com/ajkl2533/semantic-release-test/commit/0b35a8b2febb0df9041dcac03e46e1479f31a3e5))
+
+
+### BREAKING CHANGES
+
+* abc
+
 ## [3.1.1](https://github.com/ajkl2533/semantic-release-test/compare/v3.1.0...v3.1.1) (2023-03-02)
 
 
