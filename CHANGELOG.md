@@ -1,3 +1,5 @@
+Newer changelogs available in [Github Releases page](https://github.com/ajkl2533/semantic-release-test/releases)
+
 # [4.3.0](https://github.com/ajkl2533/semantic-release-test/compare/v4.2.1...v4.3.0) (2024-03-20)
 
 
