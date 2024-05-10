@@ -9,7 +9,7 @@ module.exports = {
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
+    // "@semantic-release/changelog",
     [
       "@semantic-release/npm",
       {
@@ -22,7 +22,7 @@ module.exports = {
         assets: "release/*.tgz",
       },
     ],
-    "@semantic-release/git",
+    // "@semantic-release/git",
     "semantic-release-export-data",
   ],
   preset: "angular",
